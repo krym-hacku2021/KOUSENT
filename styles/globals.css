@@ -1,0 +1,306 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flame02 {
+  margin: 0 auto;
+  padding: 1em;
+  width: 100%;
+  color: #000;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  }
+
+  .content {
+    width: 100%;
+    height: 100px;
+    background-color: #ffbda3;
+  }
+  .inner {
+    padding-top: 30px;
+    display: 20px;
+    justify-content: space-evenly;
+    margin-right: 100px;
+  }
+
+  .kadomaru {
+    
+    position: bottom;
+    bottom: 0;
+    right:0;
+    flex-direction: row;
+    display:inline-block;
+    height:35px;
+    border: 2px solid #ccc;
+    background:rgb(230, 230, 230);
+    border-radius:50px;
+    margin-left: 30px;
+  }
+  .kadomaru:hover {
+    display:inline-block;
+    height:40px;
+    /* border-radius:10px; */
+    border: 2px solid rgb(151, 162, 255);
+    background:rgb(230, 230, 230);
+    border-radius:50px;
+    margin-left: 30px;
+  }
+  .kadomaru:focus {
+    display:inline-block;
+    height:40px;
+    /* border-radius:10px; */
+    border: 2px solid rgb(11, 35, 255);
+    background:rgb(230, 230, 230);
+    border-radius:30px;
+    margin-left: 30px;
+  }
+  .textarea{
+    border-radius:45px;
+    margin:0 auto;
+    resize: none;
+    color: #000;
+  }
+  .password_box{
+    display: flex; /*アイコン、テキストボックスを調整する*/
+    align-items: center; /*アイコン、テキストボックスを縦方向の中心に*/
+    justify-content: center; /*アイコン、テキストボックスを横方向の中心に*/
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.password_inner{
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /*.password_boxの枠線お角一部被るため透明に*/
+    position: relative;
+}
+
+#text4{
+    position: absolute;
+    z-index: 1; /*.password_stringよりも上に配置*/
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    border: none; /*枠線非表示*/
+    outline: none; /*フォーカス時の枠線非表示*/
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: transparent; /*後ろの.password_stringを見せるため*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+
+.password_string{
+    position: absolute;
+    height: 100%;
+    width: 140px; /*文字列分の長さ*/
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-left: 10px; /*position: absolute;でのmarginは親要素はみ出す*/
+    font-size: 16px;
+    line-height: 50px; /*文字列を縦方向にmiddleに見せるため*/
+    background-color: transparent;
+    color: #80868b;
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+.fa-eye-slash{ /*アイコンに一定のスペースを設ける*/
+    height: 20px;
+    width: 20px;
+    padding: 5px 5px;
+}
+
+/*アニメーション*/
+#text4:focus + .password_string{
+    color: #3be5ae;
+    font-size: 10px;
+    line-height: 10px;
+    width: 85px;
+    height: 10px;
+    padding: 0 2px;
+    background-color: white;
+    transform:translate3d(5px, -6px, 0);
+}
+.txt{
+  /* position: relative; */
+  position: absolute;
+  position:center;
+  height: 400px;;
+  width: 90%;
+  align-items: center;
+  padding: 1.2em;
+  font-size:20pt;
+  border: 1px solid #FF845E;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin-top: 0.5em 0;
+}
+.txt:focus{
+
+  height: 300px;;
+  width: 90%;
+  padding: 1.2em;
+  font-size:20pt;
+  border: 3px solid #FF845E;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin: 0.5em 0;
+}
+textarea{
+  border-radius:45px;
+ margin:0 auto;
+  resize: none;
+}
+textarea::placeholder{
+    color: rgb(255, 192, 121);
+}
+.parent{
+  text-align:center;
+ margin:0 auto;
+ }
+ .square {
+  width: 90%;
+  margin:0 auto;
+  height: 600px;
+  background: #C4D8DF;
+}
+.answer {
+  /* text-align: center; */
+  border: 1px dashed #999;
+}
+.sita{
+  position: relative;
+  position: center;
+  bottom: -200px;
+}
+html
+body{
+  font-family: "Arial";
+}
+.question_frame {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  padding-top: 30px;
+  /* border: solid 1px red; */
+}
+.upload_img_button{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* 横軸に対する位置 */
+  align-content: center;    /* 縦軸に対する位置 */
+  padding: 2em 2em; /*上下　左右*/
+  width: 20%;
+  height: 170px;
+  background-color: #cccccc;
+  box-shadow: 0 5px 0 #aaaaaa;
+  border-radius: 40px;
+  transition: 0.3s;
+  right: 5%;
+}
+.upload_img {
+  display: flex;
+  flex-direction: column;   /* 主軸が縦※flexの主軸は横のためこれで縦にする */
+  align-items: center;
+  /* border: solid 1px blue; */
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* border: solid 1px green; */
+}
+.text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 5%;
+  /* border: solid 1px pink; */
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 0.5em;
+  font-size: 25px;
+  color: black;
+  width: 100%;
+  height: 100px;
+  /* border: solid 1px gold; */
+}
+.part1 {
+  display: flex;
+  /* border: solid 1px blue; */
+}
+.question_img {
+  display: flex;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  /* border: solid 1px gold; */
+}
+.text1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  color: black;
+  /* border: solid 1px gold; */
+}
+.part2 {
+  display: flex;
+  /* border: solid 1px blue; */
+}
+.attention_img {
+  display: flex;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  /* border: solid 1px gold; */
+}
+.text2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  color: black;
+  /* border: solid 1px gold; */
+}
+.basho{
+  align-items: center;
+}
+.b{
+  align-items: right;
+  margin:0;
+}

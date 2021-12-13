@@ -1,16 +1,21 @@
 import React, { useState } from "react";
+import Tab from "./tabtext.js"
 export default function question(props){
-    const[text,setText]=useState(0);
-    function handlChange(event){
-        setText(event.target.text);
+    const[text,setText]=useState("")
+    function handlonChange(event){
+        setText(event.target.value);
     }
     function handlSubmit(event){
        console.log(props.name+':'+text);
        event.preventDefault(); 
     }
+    const Updetetext=function(value){
+        setText(value);
+    };
   return (
     
   <div>
+       
   
   <div class="basho">
   <div className="question_frame">
@@ -33,17 +38,22 @@ export default function question(props){
             </div>
         </div>
         <div class="b">
-        <textarea class="txt" placeholder="3文字以上入力してください" /><br></br>
+        <textarea class="txt" placeholder="3文字以上入力してください" onChange={event => setText(event.target.value)}/><br></br>
         <p class="sita">あなたにおすすめのタグ<br></br>
         <button class="kadomaru">#喫煙</button>
         <button class="kadomaru">#タバコたかい</button>
-        <button class="kadomaru">#タバコくさい</button>
+        <button class="kadomaru">#タバコくさい</button><br></br>
+        <input type="submit" value="送信"/>
+        <div class="b">
+        <Tab name="あいうえおあいうえお"value={text} update={updateFromtabtext}></Tab>
+        </div>
+
+        
         </p>
+        
         </div>
         </div>
+        </div>
 
-
-
-  </div>
   )
 }

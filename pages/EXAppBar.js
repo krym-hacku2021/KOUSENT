@@ -185,13 +185,13 @@ export default function EXAppBar() {
             startIcon={<SendIcon />}
             sx={{
               borderRadius: "50px",
-              color: "#FA8F02",
+              color: "#ffffff",
               border: "solid 1px #FA8F02",
               background: "#3FA7C9",
               "&:hover": {
                 color: "#ffffff",
                 border: "solid 1px #ffffff",
-                background: "#f",
+                background: "#FFFFFF00",
               },
             }}
           >

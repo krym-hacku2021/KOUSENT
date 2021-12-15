@@ -1,0 +1,70 @@
+.oya2{
+    margin:0 auto;
+    max-width: 60%;
+   }
+   .oya2 e{
+    color: rgb(0, 0, 0);
+    font-weight: bold; 
+    font-size: 4em;
+   }
+   .oya2 c{
+    color: rgb(0, 0, 0);
+    /* font-weight: bold;  */
+    font-size: 2.7em;
+   }
+   .txa{
+    height: 45px;;
+  width: 100%;
+  padding: 1.2em;
+  font-size:20pt;
+  border: 2px solid #FF845E;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin-top: 0.5em 0;
+  resize: none;
+  border-radius:20px;
+  vertical-align : middle ;
+  margin-bottom: 40px;
+  }
+  .txa:focus{
+  height: 45px;
+  width: 100%;
+  padding: 1.2em;
+  font-size:20pt;
+  border: 2px solid #FF845E;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin-top: 0.5em 0;
+  resize: none;
+  border-radius:20px;
+  /*  */
+  }
+  .intag{
+    height: 400px;;
+    width: 100%;
+    padding: 1.2em;
+    font-size:20pt;
+    border: 2px solid #FF845E;
+    box-sizing: border-box;
+    background: #ffffff;
+    margin-bottom: 70px;
+    margin-top: 0px;
+    /* text-align: center; */
+  }
+  .iconbutton{
+    /* position: absolute; */
+    background: #ffffff;
+    /* width: 200px; */
+    /* height: 15%; */
+    text-align: center;
+    border: none;
+    margin-bottom: 80px;
+  }
+  .iconbutton:focus{
+    /* position: absolute; */
+    background: #ffffff;
+    /* width: 200px; */
+    /* height: 15%; */
+    border: none;
+    filter: brightness(85%);
+  }

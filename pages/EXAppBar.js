@@ -1,6 +1,6 @@
 /** @format */
 
-import * as React from "react";
+// import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -19,6 +19,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import SendIcon from "@mui/icons-material/Send";
+import React, { useState } from "react";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -66,6 +67,10 @@ export default function EXAppBar() {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const [serch,setSerch]=useState("");
+  const update=function(){
+    props.update(serch);
+}
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -160,7 +165,9 @@ export default function EXAppBar() {
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            ロゴ
+            <a href="http://localhost:3000/">
+            <img  src="/KOSENT-c.png" alt="KOSENT"/>
+            </a>
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Search>
@@ -170,6 +177,7 @@ export default function EXAppBar() {
             <StyledInputBase
               placeholder="キーワード検索"
               inputProps={{ "aria-label": "search" }}
+              onChange={event => setSerch(event.target.value)}
             />
           </Search>
           <Button
@@ -179,22 +187,25 @@ export default function EXAppBar() {
               borderRadius: "50px",
               color: "#FA8F02",
               border: "solid 1px #FA8F02",
-              background: "#ffffff",
+              background: "#3FA7C9",
               "&:hover": {
                 color: "#ffffff",
                 border: "solid 1px #ffffff",
-                background: "#FFFFFF00",
+                background: "#f",
               },
             }}
           >
+            <a href="http://localhost:3000/text">
             <Typography
               variant="button"
               noWrap
               component="div"
               sx={{ display: { xs: "none", sm: "block" } }}
             >
-              投稿
+              質問・相談
+              
             </Typography>
+            </a>
           </Button>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton

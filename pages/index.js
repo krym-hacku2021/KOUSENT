@@ -17,7 +17,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Textarea from "./tabtext.js"
 import Text from "./text.js";
-import Tarea from "./home.js";
+import Baloon from "./baloon.js";
 import React, { useState } from "react";
 
 
@@ -53,20 +53,20 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
-export function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
+// export function Example() {
+//   // Declare a new state variable, which we'll call "count"
+//   const [count, setCount] = useState(0);
 
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <p>You clicked {count} times</p>
+//       <button onClick={() => setCount(count + 1)}>
+//         Click me
+//       </button>
+//     </div>
+//   );
+// }
 
 export default function Home() {
   const [tabValue, setTabValue] = React.useState(0);
@@ -85,7 +85,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <EXAppBar></EXAppBar>
-        <div>aaaaaaa</div>
+        
         <Container>
           <Carousel
             autoPlay={true}
@@ -102,7 +102,7 @@ export default function Home() {
                 backgroundColor: "#FFB8B8",
               }}
             >
-              <h2>1ページ目</h2>
+              <h2><Baloon></Baloon></h2>
             </Paper>
             <Paper
               elevation={3}
@@ -111,7 +111,7 @@ export default function Home() {
                 backgroundColor: "#B8FFB8",
               }}
             >
-              <h2>2ページ目</h2>
+              <h2><Baloon></Baloon></h2>
             </Paper>
             <Paper
               elevation={3}
@@ -120,7 +120,7 @@ export default function Home() {
                 backgroundColor: "#B8D7FF",
               }}
             >
-              <h2>3ページ目</h2>
+              <h2><Baloon></Baloon></h2>
             </Paper>
           </Carousel>
         </Container>
@@ -131,11 +131,12 @@ export default function Home() {
             onChange={handleTabChange}
             aria-label="basic tabs example"
           >
-            <Tab label="Item One" {...a11yProps(0)} sx={{ width: "50vw" }} />
-            <Tab label="Item Two" {...a11yProps(1)} />
+            <Tab label="最新の投稿" {...a11yProps(0)} sx={{ width: "100%" }} />
+            <Tab label="人気の投稿" {...a11yProps(1)} sx={{width:"100%"}}/>
           </Tabs>
         </Box>
         <TabPanel value={tabValue} index={0}>
+          
           <Textarea></Textarea>
           <Textarea></Textarea>
           <Textarea></Textarea>
@@ -154,28 +155,8 @@ export default function Home() {
           <Textarea></Textarea>
           
         </TabPanel>
-        {/* <Text></Text> */}
       </main>
 
-{/* function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  ); */}
-      
-
-      
-
-      {/* <footer className={styles.footer}>
-        <div>Copyright © 2021 iwa. All Rights Reserved.</div>
-      </footer> */}
     </div>
   );
 

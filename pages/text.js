@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-import Tab from "./tabtext.js"
+import EXAppBar from "./EXAppBar";
 export default function question(props){
     const[text,setText]=useState("")
-    function handlonChange(event){
-        setText(event.target.value);
+    // function handlonChange(event){
+    //     setText(event.target.value);
+    // }
+    // function handlSubmit(event){
+    //    console.log(props.name+':'+text);
+    //    event.preventDefault(); 
+    // }
+
+    const update=function(){
+        props.update(text);
     }
-    function handlSubmit(event){
-       console.log(props.name+':'+text);
-       event.preventDefault(); 
-    }
-    const Updetetext=function(value){
-        setText(value);
-    };
+
   return (
-    
   <div>
+      <EXAppBar/>
        
   
   <div class="basho">
@@ -38,19 +40,18 @@ export default function question(props){
             </div>
         </div>
         <div class="b">
-        <textarea class="txt" placeholder="3文字以上入力してください" onChange={event => setText(event.target.value)}/><br></br>
+        <textarea class="txt" placeholder="3文字以上入力してください" 
+        onChange={event => setText(event.target.value)}
+        /><br></br>
         <p class="sita">あなたにおすすめのタグ<br></br>
-        <button class="kadomaru">#喫煙</button>
-        <button class="kadomaru">#タバコたかい</button>
-        <button class="kadomaru">#タバコくさい</button><br></br>
-        <input type="submit" value="送信"/>
+        <button class="kadomaru">#広島商船</button>
+        <button class="kadomaru">#流通情報工学科</button>
+        <button class="kadomaru">#情報コース</button><br></br>
+        <input type="submit" value="送信" />
         <div class="b">
-        <Tab name="あいうえおあいうえお"value={text} update={updateFromtabtext}></Tab>
+        {/* <Tab name="あいうえお" value={text} update={text}></Tab> */}
         </div>
-
-        
         </p>
-        
         </div>
         </div>
         </div>
